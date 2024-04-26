@@ -2,147 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <!-- 1. Crea un componente per rappresentare la card del tuo album, che utilizzerai in tutto il progeto.
+  <header>
+    <!-- 2. Implementa una navigation bar usando il componente bootstrap apposito. Questa navbar dovrà avere un link per ogni sezione della tua pagina. -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- 1. Crea un componente per rappresentare la card del tuo album, che utilizzerai in tutto il progeto.
 - Bootstrap ti rende disponibili alcuni componenti per card e immagini
 - puoi scegliere di partire da quelli e modificarli, oppure partire da zero e creare i tuoi componenti via CSS. I dati che devono comparire sulla card necessari sono:
 NB: assicurati di applicare le stesse regole di stile a tutti i componenti album che userai nella pagina per mantenere la coerenza degli elementi e degli stili. -->
-    <div class="container">
-      <!-- GX PADDING, A ME SERVE IL MARGIN -->
-        <div class="row gx-5">
-            <div class="card col-xl-3 col-md-4 col-sm-6">
-                <!-- l'immagine di copertina dell'album -->
-                <img src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <!-- il titolo dell'album -->
-                    <h5 class="card-title">The Illest Vol. 1</h5>
-                    <!-- il gruppo / artista / dj dell'album -->
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
-                    <!-- il genere dell'album -->
-                    <p class="card-text">GENERE: Pop Rap</p>
-                    <!-- la durata dell'album -->
-                    <p class="card-text">DURATA: 36:73</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card col-xl-3 col-md-4 col-sm-6">
-                <!-- l'immagine di copertina dell'album -->
-                <img src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <!-- il titolo dell'album -->
-                    <h5 class="card-title">The Illest Vol. 1</h5>
-                    <!-- il gruppo / artista / dj dell'album -->
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
-                    <!-- il genere dell'album -->
-                    <p class="card-text">GENERE: Pop Rap</p>
-                    <!-- la durata dell'album -->
-                    <p class="card-text">DURATA: 36:73</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card col-xl-3 col-md-4 col-sm-6">
-                <!-- l'immagine di copertina dell'album -->
-                <img src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <!-- il titolo dell'album -->
-                    <h5 class="card-title">The Illest Vol. 1</h5>
-                    <!-- il gruppo / artista / dj dell'album -->
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
-                    <!-- il genere dell'album -->
-                    <p class="card-text">GENERE: Pop Rap</p>
-                    <!-- la durata dell'album -->
-                    <p class="card-text">DURATA: 36:73</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-            <div class="card col-xl-3 col-md-4 col-sm-6">
-                <!-- l'immagine di copertina dell'album -->
-                <img src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <!-- il titolo dell'album -->
-                    <h5 class="card-title">The Illest Vol. 1</h5>
-                    <!-- il gruppo / artista / dj dell'album -->
-                    <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
-                    <!-- il genere dell'album -->
-                    <p class="card-text">GENERE: Pop Rap</p>
-                    <!-- la durata dell'album -->
-                    <p class="card-text">DURATA: 36:73</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. Implementa una navigation bar usando il componente bootstrap apposito. Questa navbar dovrà avere un link per ogni sezione della tua pagina. -->
-
-    <!-- 3. Crea una sezione responsive per i tuoi album preferiti.
+  <!-- 3. Crea una sezione responsive per i tuoi album preferiti.
 In questa sezione dovrai avere:
 - 4 album per linea quando lo schermo è molto grande
 - 3 album per linea quando lo schermo ha una dimensione intermedia (tablet o simili)
 - 2 album per linea quando lo schermo è molto piccolo (mobile) -->
+  <main>
+    <section class="container">
+      <div class="row">
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <!-- l'immagine di copertina dell'album -->
+          <img
+            src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <!-- il titolo dell'album -->
+            <h5 class="card-title">The Illest Vol. 1</h5>
+            <!-- il gruppo / artista / dj dell'album -->
+            <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
+            <!-- il genere dell'album -->
+            <p class="card-text mb-0">GENERE: Pop Rap</p>
+            <!-- la durata dell'album -->
+            <p class="card-text">DURATA: 36:73</p>
+          </div>
+        </div>
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <!-- l'immagine di copertina dell'album -->
+          <img
+            src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <!-- il titolo dell'album -->
+            <h5 class="card-title">The Illest Vol. 1</h5>
+            <!-- il gruppo / artista / dj dell'album -->
+            <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
+            <!-- il genere dell'album -->
+            <p class="card-text mb-0">GENERE: Pop Rap</p>
+            <!-- la durata dell'album -->
+            <p class="card-text">DURATA: 36:73</p>
+          </div>
+        </div>
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <!-- l'immagine di copertina dell'album -->
+          <img
+            src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <!-- il titolo dell'album -->
+            <h5 class="card-title">The Illest Vol. 1</h5>
+            <!-- il gruppo / artista / dj dell'album -->
+            <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
+            <!-- il genere dell'album -->
+            <p class="card-text mb-0">GENERE: Pop Rap</p>
+            <!-- la durata dell'album -->
+            <p class="card-text">DURATA: 36:73</p>
+          </div>
+        </div>
+        <div class="card col-xl-3 col-md-4 col-sm-6">
+          <!-- l'immagine di copertina dell'album -->
+          <img
+            src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <!-- il titolo dell'album -->
+            <h5 class="card-title">The Illest Vol. 1</h5>
+            <!-- il gruppo / artista / dj dell'album -->
+            <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
+            <!-- il genere dell'album -->
+            <p class="card-text mb-0">GENERE: Pop Rap</p>
+            <!-- la durata dell'album -->
+            <p class="card-text">DURATA: 36:73</p>
+          </div>
+        </div>
 
-    <!-- 4. Prendi un album che ti piace molto e crea una sezione con:
-- una grande immagine di copertina
-- titolo
-- band
-- durata
-- genere
-- tracce dell'album (in un list-group. Trovala tra i componenti di Bootstrap)
-- ... e qualsiasi cosa ti venga in mente di interessante che lo riguardi! -->
-    <footer>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+      </div>
+    </section>
+    <section class="container">
+      <div class="row justify-content-center">
+        <h2 class="text-center ">Album preferito</h2>
+        <!-- 4. Prendi un album che ti piace molto e crea una sezione con: -->
+        <div class="col-6">
+          <!-- l'immagine di copertina dell'album -->
+          <img
+            src="https://i.discogs.com/zETW7WumJ6me1yBC8TF6o0vGQ9vcjXRka9Z4mJHkkCc/rs:fit/g:sm/q:90/h:321/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkx/Nzg3LTE1MzYzNDUz/NTAtMzI0Mi5qcGVn.jpeg"
+            class="card-img-top" alt="...">
+          <div class="card-body d-flex justify-content-around">
+            <div>
+              <!-- il titolo dell'album -->
+              <h5 class="card-title">The Illest Vol. 1</h5>
+              <!-- il gruppo / artista / dj dell'album -->
+              <h6 class="card-subtitle mb-2 text-body-secondary">Mostro</h6>
+            </div>
+            <div>
+              <!-- il genere dell'album -->
+              <p class="card-text mb-0"><b>GENERE:</b> Pop Rap</p>
+              <!-- la durata dell'album -->
+              <p class="card-text"><b>DURATA:</b> 36:73</p>
+            </div>
+          </div>
+          <!-- 
+            - una grande immagine di copertina
+            - titolo
+            - band
+            - durata
+            - genere
+            - tracce dell'album (in un list-group. Trovala tra i componenti di Bootstrap)
+            - ... e qualsiasi cosa ti venga in mente di interessante che lo riguardi! -->
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item">Tre metri sotto terra <span class="badge text-bg-primary rounded-pill">3:54</span></li>
+            <li class="list-group-item">Brutalità, terrore e violenza <span class="badge text-bg-primary rounded-pill">3:15</span></li>
+            <li class="list-group-item">Guarda e impara <span class="badge text-bg-primary rounded-pill">3:22</span></li>
+            <li class="list-group-item">Lo giuro solennemente <span
+                class="badge text-bg-primary rounded-pill">2:05</span></li>
+            <li class="list-group-item">Ispirazione (feat. Lowlow & Vegas Jones) <span
+                class="badge text-bg-primary rounded-pill">4:28</span></li>
+            <li class="list-group-item">Poco prima dello schianto <span
+                class="badge text-bg-primary rounded-pill">4:00</span></li>
+            <li class="list-group-item">L'ottava meraviglia del mondo <span
+                class="badge text-bg-primary rounded-pill">3:28</span></li>
+            <li class="list-group-item">Trema la terra <span class="badge text-bg-primary rounded-pill">3:20</span></li>
+            <li class="list-group-item">Solamente unico (feat. Briga) <span
+                class="badge text-bg-primary rounded-pill">4:32</span></li>
+            <li class="list-group-item">Il meglio del peggio <span
+                class="badge text-bg-primary rounded-pill">3:20</span></li>
+            <li class="list-group-item">Sento <span class="badge text-bg-primary rounded-pill">2:49</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html
